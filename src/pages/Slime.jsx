@@ -30,7 +30,7 @@ const t = {
       { icon: "⚙️", t: "Decision / Execution Separation", b: "SLIME decides if the effect can exist. The actuator executes mechanically. It never re-authorizes. The signal is the authorization." },
       { icon: "🔇", t: "Zero Semantic Feedback", b: "No reason codes. No explanations. No learning signals. The non-event is silent by construction, not by policy." },
     ],
-    canonStatement: ["Canonical Statement", "SLIME applies a law that cannot be negotiated.\nIt exposes no controls, offers no explanations, and allows no exceptions.\nWhat passes through SLIME is physically authorized — everything else does not exist."],
+    canonStatement: ["Canonical Statement", "SLIME applies a law that cannot be negotiated.\nIt exposes no controls, offers no explanations, and allows no exceptions.\nWhat passes through SLIME is authorized. Everything else is ∅."],
 
     archTag: "Architecture",
     archTitle: "4 Fixed Modules. Nothing else.",
@@ -167,7 +167,7 @@ const t = {
       ["Endpoint", "<code>POST /action</code>"],
       ["Bind", "<code>127.0.0.1:8080</code> (non-configurable)"],
       ["Format", "JSON · <code>domain</code>, <code>magnitude</code>, <code>payload?</code>"],
-      ["Response OK", '<code>{"status":"AUTHORIZED","effect_id":"…"}</code>'],
+      ["Response OK", '<code>{"status":"AUTHORIZED"}</code>'],
       ["Response ∅", '<code>{"status":"IMPOSSIBLE"}</code>'],
       ["Rate limit", "None — saturation → IMPOSSIBLE"],
     ],
@@ -224,7 +224,7 @@ const t = {
       { icon: "⚙️", t: "Séparation Décision / Exécution", b: "SLIME décide si l'effet peut exister. L'actuator exécute mécaniquement. Il ne ré-autorise jamais. Le signal est l'autorisation." },
       { icon: "🔇", t: "Zéro Feedback Sémantique", b: "Aucun code de raison. Aucune explication. Aucun signal d'apprentissage. Le non-événement est silencieux par construction, pas par politique." },
     ],
-    canonStatement: ["Énoncé Canonique", "SLIME applique une loi qui ne peut être négociée.\nIl n'expose aucun contrôle, n'offre aucune explication, et ne permet aucune exception.\nCe qui passe par SLIME est physiquement autorisé — tout le reste n'existe pas."],
+    canonStatement: ["Énoncé Canonique", "SLIME applique une loi qui ne peut être négociée.\nIl n'expose aucun contrôle, n'offre aucune explication, et ne permet aucune exception.\nCe qui passe par SLIME est autorisé. Tout le reste est ∅."],
 
     archTag: "Architecture",
     archTitle: "4 Modules Fixes. Rien d'autre.",
@@ -361,7 +361,7 @@ const t = {
       ["Endpoint", "<code>POST /action</code>"],
       ["Bind", "<code>127.0.0.1:8080</code> (non-configurable)"],
       ["Format", "JSON · <code>domain</code>, <code>magnitude</code>, <code>payload?</code>"],
-      ["Réponse OK", '<code>{"status":"AUTHORIZED","effect_id":"…"}</code>'],
+      ["Réponse OK", '<code>{"status":"AUTHORIZED"}</code>'],
       ["Réponse ∅", '<code>{"status":"IMPOSSIBLE"}</code>'],
       ["Rate limit", "Aucun — saturation → IMPOSSIBLE"],
     ],
@@ -563,22 +563,6 @@ export default function SlimePage() {
           <SectionTag>{tx.archTag}</SectionTag>
           <h2 className="text-2xl font-bold text-foreground mb-2">{tx.archTitle}</h2>
           <p className="text-muted-foreground text-sm mb-8 max-w-xl">{tx.archSub}</p>
-
-          {/* ASCII flow diagram */}
-          <div className="border border-border bg-card p-5 mb-6 overflow-x-auto">
-            <p className="text-[0.65rem] uppercase tracking-widest text-muted-foreground mb-4">{tx.asciiLabel}</p>
-            <pre className="font-mono text-xs text-foreground/60 leading-relaxed select-all">{`Existing System
-      ↓
-  Ingress  (HTTP · 127.0.0.1:8080)
-      ↓
-  AB-S Core  (sealed law · compile-time)
-      ↓
-  Egress  (32 bytes → /run/slime/egress.sock)
-      ↓
-  Actuator  (mechanical execution)
-      ↓
-  Real effect  — or  ∅`}</pre>
-          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="border border-border bg-card p-5">
@@ -836,7 +820,7 @@ Content-Type: application/json
   "magnitude": 500
 }
 
-→ { "status": "AUTHORIZED", "effect_id": "…" }
+→ { "status": "AUTHORIZED" }
 → { "status": "IMPOSSIBLE" }`}</pre>
                     </div>
                   )}

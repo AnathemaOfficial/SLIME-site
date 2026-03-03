@@ -6,7 +6,7 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 // ── i18n ──────────────────────────────────────────────────────────────────────
 const t = {
   en: {
-    backLabel: "SYF Corp",
+    backLabel: "SYFCORP",
     sections: [
       { id: "overview",     label: "Overview" },
       { id: "architecture", label: "Architecture" },
@@ -194,7 +194,7 @@ const t = {
     footerBack: "syfcorp.com",
   },
   fr: {
-    backLabel: "SYF Corp",
+    backLabel: "SYFCORP",
     sections: [
       { id: "overview",     label: "Vue d'ensemble" },
       { id: "architecture", label: "Architecture" },

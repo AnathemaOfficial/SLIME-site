@@ -9,7 +9,7 @@ export default function NotFound() {
         <h1 className="text-xl font-semibold text-foreground mb-2">Non-événement</h1>
         <p className="text-sm text-muted-foreground mb-6">Cette page n'existe pas. Ce n'est pas une erreur — c'est un état terminal.</p>
         <Link to="/" className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors">
-          <ArrowLeft className="h-4 w-4" /> Retour à SYF Corp
+          <ArrowLeft className="h-4 w-4" /> Retour à SYFCORP
         </Link>
       </div>
     </div>

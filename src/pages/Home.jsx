@@ -181,7 +181,7 @@ export default function SyfcorpHomepage() {
               {/* Logo + wordmark */}
               <div className="inline-flex items-center gap-3">
                 <img
-                  src="/syfcorp-logo.png"
+                  src="/favicon.png"
                   alt="SYFCORP logo"
                   className="h-9 w-9 object-contain invert"
                 />
@@ -341,8 +341,8 @@ export default function SyfcorpHomepage() {
         {/* Footer */}
         <footer className="mt-10 pb-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted-foreground border-t border-border pt-6">
-            <div className="flex items-center gap-2">
-              <img src="/syfcorp-logo.png" alt="" className="h-4 w-4 object-contain invert opacity-40" />
+              <div className="flex items-center gap-2">
+              <img src="/favicon.png" alt="" className="h-4 w-4 object-contain invert opacity-40" />
               <span className="font-mono">SYFCORP — syfcorp.com</span>
             </div>
             <div className="flex items-center gap-4">

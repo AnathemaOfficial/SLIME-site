@@ -515,11 +515,11 @@ export default function SlimePage() {
         <div className="relative max-w-5xl mx-auto px-4 py-20">
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="inline-block text-[0.65rem] tracking-[3px] uppercase text-blue-400 border border-blue-900/50 px-3 py-1 mb-6">{tx.heroTag}</div>
-            <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-foreground leading-tight mb-4">
-              {tx.heroTitle.map((line, i) => (
-                <span key={i}>{i === tx.heroAccent ? <span className="text-blue-400">{line}</span> : line}{i < tx.heroTitle.length - 1 && <br />}</span>
-              ))}
-            </h1>
+            <img
+              src="/SLIME-header-logo.png"
+              alt="SLIME — Systemic Law Invariant Machine Environment"
+              className="mb-4 w-auto max-w-[480px] sm:max-w-[600px]"
+            />
             <p className="text-muted-foreground text-base max-w-xl mb-8 leading-relaxed">{tx.heroSub}</p>
             <div className="inline-block font-mono text-xl text-blue-400 bg-white/5 border border-blue-900/40 px-5 py-3 mb-8">
               S : A &nbsp;→&nbsp; E &nbsp;∪&nbsp; &#123;∅&#125;

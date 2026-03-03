@@ -190,6 +190,12 @@ const t = {
       ["T5", "Socket 0660 + group slime-egress validated"],
       ["T6", "Boot ordering validated after reboot"],
     ],
+    asciiLabel: "System flow",
+    ctaTitle: "Ready to integrate SLIME?",
+    ctaSub: "Source code, full specification, and v0.1 diff are available on GitHub.",
+    ctaGithub: "View on GitHub",
+    ctaSpec: "v0.1 Specification",
+    ingressExampleLabel: "Request example",
     footerText: "Prototype audited by Manus AI · Analyzed by Claude & GPT-4 · © 2026 AnathemaOfficial",
     footerBack: "syfcorp.com",
   },
@@ -378,6 +384,12 @@ const t = {
       ["T5", "Socket 0660 + group slime-egress validés"],
       ["T6", "Boot ordering validé après reboot"],
     ],
+    asciiLabel: "Flux système",
+    ctaTitle: "Prêt à intégrer SLIME ?",
+    ctaSub: "Le code source, la spécification complète et le diff v0.1 sont disponibles sur GitHub.",
+    ctaGithub: "Voir sur GitHub",
+    ctaSpec: "Spécification v0.1",
+    ingressExampleLabel: "Exemple de requête",
     footerText: "Prototype audité par Manus AI · Analysé par Claude & GPT-4 · © 2026 AnathemaOfficial",
     footerBack: "syfcorp.com",
   },
@@ -551,6 +563,23 @@ export default function SlimePage() {
           <SectionTag>{tx.archTag}</SectionTag>
           <h2 className="text-2xl font-bold text-foreground mb-2">{tx.archTitle}</h2>
           <p className="text-muted-foreground text-sm mb-8 max-w-xl">{tx.archSub}</p>
+
+          {/* ASCII flow diagram */}
+          <div className="border border-border bg-card p-5 mb-6 overflow-x-auto">
+            <p className="text-[0.65rem] uppercase tracking-widest text-muted-foreground mb-4">{tx.asciiLabel}</p>
+            <pre className="font-mono text-xs text-foreground/60 leading-relaxed select-all">{`Existing System
+      ↓
+  Ingress  (HTTP · 127.0.0.1:8080)
+      ↓
+  AB-S Core  (sealed law · compile-time)
+      ↓
+  Egress  (32 bytes → /run/slime/egress.sock)
+      ↓
+  Actuator  (mechanical execution)
+      ↓
+  Real effect  — or  ∅`}</pre>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="border border-border bg-card p-5">
               <p className="text-[0.65rem] uppercase tracking-widest text-muted-foreground mb-4">{tx.archFlowLabel}</p>
@@ -796,6 +825,21 @@ export default function SlimePage() {
                       </div>
                     ))}
                   </dl>
+                  {label === tx.ingressLabel && (
+                    <div className="mt-4 border-t border-border pt-4">
+                      <p className="text-[0.65rem] uppercase tracking-widest text-muted-foreground mb-2">{tx.ingressExampleLabel}</p>
+                      <pre className="bg-[#0d1117] border border-border font-mono text-xs text-green-400 p-3 overflow-x-auto leading-relaxed">{`POST http://127.0.0.1:8080/action
+Content-Type: application/json
+
+{
+  "domain": "transfer",
+  "magnitude": 500
+}
+
+→ { "status": "AUTHORIZED", "effect_id": "…" }
+→ { "status": "IMPOSSIBLE" }`}</pre>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -819,6 +863,34 @@ export default function SlimePage() {
           </div>
         </section>
 
+      </div>
+
+      {/* ── CTA ── */}
+      <div className="border-t border-border bg-card">
+        <div className="max-w-4xl mx-auto px-4 py-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div>
+            <h3 className="text-base font-bold text-foreground mb-1">{tx.ctaTitle}</h3>
+            <p className="text-sm text-muted-foreground max-w-md">{tx.ctaSub}</p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+            <a
+              href="https://github.com/AnathemaOfficial/SLIME"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-foreground text-background text-xs font-mono hover:opacity-90 transition-opacity"
+            >
+              <ExternalLink className="h-3.5 w-3.5" /> {tx.ctaGithub}
+            </a>
+            <a
+              href="https://github.com/AnathemaOfficial/SLIME/blob/main/ACTUATOR_V0_CANON.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 border border-border text-xs font-mono text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
+            >
+              <ExternalLink className="h-3.5 w-3.5" /> {tx.ctaSpec}
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* ── Footer ── */}

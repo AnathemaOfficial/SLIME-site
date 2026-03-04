@@ -9,6 +9,7 @@ const t = {
     backLabel: "SYFCORP",
     sections: [
       { id: "overview",     label: "Overview" },
+      { id: "whydiff",      label: "Why Different" },
       { id: "architecture", label: "Architecture" },
       { id: "secmodel",     label: "Security Model" },
       { id: "threats",      label: "Threat Model" },
@@ -22,7 +23,7 @@ const t = {
     heroTag: "CANON / SEALED",
     heroTitle: ["Systemic Law", "Invariant Machine", "Environment"],
     heroAccent: 1,
-    heroSub: "A sealed execution environment that enforces non-negotiable action limits. Not a firewall. Not a policy engine. A structural law.",
+    heroSub: "A sealed execution membrane that enforces structural action limits. SLIME does not interpret policies and does not evaluate permissions. It only materializes the outcome of a structural law.",
     stats: [["32","bytes — fixed ABI"],["2","possible states"],["0","retry / fallback"],["5","AVP invariants"]],
 
     overviewTag: "Fundamentals",
@@ -35,6 +36,19 @@ const t = {
       { icon: "🔇", t: "Zero Semantic Feedback", b: "No reason codes. No explanations. No learning signals. The non-event is silent by construction, not by policy." },
     ],
     canonStatement: ["Canonical Statement", "SLIME applies a law that cannot be negotiated.\nIt exposes no controls, offers no explanations, and allows no exceptions.\nWhat passes through SLIME is authorized. Everything else is ∅."],
+
+    whyDiffTag: "Why SLIME Is Different",
+    whyDiffTitle: "Security by structural law",
+    whyDiffSub: "Most security systems attempt to control behavior through policies, permissions, or runtime rules. SLIME takes a fundamentally different approach.",
+    whyDiffManifesto: "SLIME is not a firewall and not a policy engine. It is a structural membrane that enforces the physical boundary between decision and effect. Instead of evaluating permissions at runtime, the SYF stack removes the representability of unauthorized actions. If the authorization signal does not exist, the actuator cannot act. The system therefore operates as a monotone capability machine: each transition reduces the space of possible actions, capacity never increases, and execution occurs only when a deterministic 32-byte signal is emitted. Security emerges from the structure itself, not from dynamic policy interpretation.",
+    whyDiffCards: [
+      { icon: "🚫", t: "Structural Impossibility", b: "Instead of deciding what is allowed, the system removes the representability of certain effects. If the authorization signal does not exist, the action cannot occur." },
+      { icon: "📉", t: "Monotone Capability Model", b: "Each transition consumes capacity or reduces the space of possible actions. possible_actions(t+1) ⊆ possible_actions(t). The system cannot accumulate new power over time." },
+      { icon: "⚡", t: "Binary Execution Boundary", b: "AUTHORIZED → signal emitted → actuator executes. IMPOSSIBLE → no signal → actuator remains silent. No third state. No explanations. No semantic feedback." },
+      { icon: "📋", t: "Simpler Audits", b: "Because the system is monotone and fail-closed, auditors only verify that capacity never increases, the 32-byte ABI is preserved, and no semantic feedback reaches agents." },
+    ],
+    whyDiffEliminates: "This eliminates entire classes of vulnerabilities:",
+    whyDiffElimList: ["Privilege escalation", "Policy drift", "Adaptive probing", "Semantic feedback oracles", "Replay amplification"],
 
     archTag: "Architecture",
     archTitle: "4 Fixed Modules. Nothing else.",
@@ -211,6 +225,7 @@ const t = {
     securityTag: "Security Invariants",
     securityTitle: "Structural Guarantees of the Stack",
     securitySub: "These invariants are not policies — they are structural properties enforced by type systems, compilation, and architecture. They cannot be disabled at runtime.",
+    securityVerifiability: "These invariants are mechanically verifiable properties enforced by compile-time constraints, sealed type surfaces, a fixed 32-byte ABI, and fail-closed execution semantics. Auditing the system therefore reduces to verifying that these invariants hold.",
     securityInvariants: [
       { id: "S1", title: "Determinism", desc: "Same input + same state → same verdict. No randomness, no timing dependency, no external oracle in the decision path.", enforcer: "AB-S + SLIME" },
       { id: "S2", title: "Fail-Closed", desc: "On any error, ambiguity, or missing resource: DENY / silence. No degraded mode, no fallback, no partial authorization.", enforcer: "Gate + SLIME" },
@@ -284,6 +299,7 @@ const t = {
     backLabel: "SYFCORP",
     sections: [
       { id: "overview",     label: "Vue d'ensemble" },
+      { id: "whydiff",      label: "Pourquoi" },
       { id: "architecture", label: "Architecture" },
       { id: "secmodel",     label: "Modèle Sécurité" },
       { id: "threats",      label: "Menaces" },
@@ -297,7 +313,7 @@ const t = {
     heroTag: "CANON / SEALED",
     heroTitle: ["Systemic Law", "Invariant Machine", "Environment"],
     heroAccent: 1,
-    heroSub: "Un environnement d'exécution scellé qui enforces des limites d'actions non-négociables. Pas un firewall. Pas un policy engine. Une loi structurelle.",
+    heroSub: "Une membrane d'exécution scellée qui enforce des limites d'actions structurelles. SLIME n'interprète pas de politiques et n'évalue pas de permissions. Il matérialise uniquement le résultat d'une loi structurelle.",
     stats: [["32","bytes — ABI fixe"],["2","états possibles"],["0","retry / fallback"],["5","invariants AVP"]],
 
     overviewTag: "Fondamentaux",
@@ -310,6 +326,19 @@ const t = {
       { icon: "🔇", t: "Zéro Feedback Sémantique", b: "Aucun code de raison. Aucune explication. Aucun signal d'apprentissage. Le non-événement est silencieux par construction, pas par politique." },
     ],
     canonStatement: ["Énoncé Canonique", "SLIME applique une loi qui ne peut être négociée.\nIl n'expose aucun contrôle, n'offre aucune explication, et ne permet aucune exception.\nCe qui passe par SLIME est autorisé. Tout le reste est ∅."],
+
+    whyDiffTag: "Pourquoi SLIME Est Différent",
+    whyDiffTitle: "La sécurité par loi structurelle",
+    whyDiffSub: "La plupart des systèmes de sécurité tentent de contrôler le comportement via des politiques, permissions ou règles dynamiques. SLIME adopte une approche fondamentalement différente.",
+    whyDiffManifesto: "SLIME n'est ni un firewall ni un policy engine. C'est une membrane structurelle qui enforce la frontière physique entre décision et effet. Au lieu d'évaluer des permissions à l'exécution, la stack SYF retire la représentabilité des actions non autorisées. Si le signal d'autorisation n'existe pas, l'actuator ne peut pas agir. Le système opère donc comme une machine à capacités monotone : chaque transition réduit l'espace d'actions possibles, la capacité n'augmente jamais, et l'exécution ne se produit que lorsqu'un signal déterministe de 32 bytes est émis. La sécurité émerge de la structure elle-même, pas de l'interprétation dynamique de politiques.",
+    whyDiffCards: [
+      { icon: "🚫", t: "Impossibilité Structurelle", b: "Au lieu de décider ce qui est permis, le système retire la représentabilité de certains effets. Si le signal d'autorisation n'existe pas, l'action ne peut pas se produire." },
+      { icon: "📉", t: "Modèle de Capacité Monotone", b: "Chaque transition consomme de la capacité ou réduit l'espace d'actions possibles. possible_actions(t+1) ⊆ possible_actions(t). Le système ne peut pas accumuler de nouveau pouvoir." },
+      { icon: "⚡", t: "Frontière d'Exécution Binaire", b: "AUTHORIZED → signal émis → l'actuator exécute. IMPOSSIBLE → pas de signal → l'actuator reste silencieux. Aucun troisième état. Aucune explication. Aucun feedback sémantique." },
+      { icon: "📋", t: "Audits Simplifiés", b: "Puisque le système est monotone et fail-closed, les auditeurs vérifient uniquement que la capacité n'augmente jamais, l'ABI 32 bytes est préservé, et aucun feedback sémantique n'atteint les agents." },
+    ],
+    whyDiffEliminates: "Cela élimine des classes entières de vulnérabilités :",
+    whyDiffElimList: ["Escalade de privilèges", "Dérive de politiques", "Sondage adaptatif", "Oracles de feedback sémantique", "Amplification par replay"],
 
     archTag: "Architecture",
     archTitle: "4 Modules Fixes. Rien d'autre.",
@@ -486,6 +515,7 @@ const t = {
     securityTag: "Invariants de Sécurité",
     securityTitle: "Garanties Structurelles de la Stack",
     securitySub: "Ces invariants ne sont pas des politiques — ce sont des propriétés structurelles enforcées par les systèmes de types, la compilation et l'architecture. Ils ne peuvent pas être désactivés à l'exécution.",
+    securityVerifiability: "Ces invariants sont des propriétés mécaniquement vérifiables enforcées par des contraintes de compilation, des surfaces de types scellées, un ABI fixe de 32 bytes et une sémantique d'exécution fail-closed. Auditer le système se réduit donc à vérifier que ces invariants tiennent.",
     securityInvariants: [
       { id: "S1", title: "Déterminisme", desc: "Même entrée + même état → même verdict. Aucune aléatoire, aucune dépendance temporelle, aucun oracle externe dans le chemin de décision.", enforcer: "AB-S + SLIME" },
       { id: "S2", title: "Fail-Closed", desc: "En cas d'erreur, d'ambiguïté ou de ressource manquante : DENY / silence. Aucun mode dégradé, aucun fallback, aucune autorisation partielle.", enforcer: "Gate + SLIME" },
@@ -717,6 +747,40 @@ export default function SlimePage() {
           <div className="border-l-2 border-blue-700 pl-5 py-2 bg-blue-900/5 border border-blue-900/20">
             <p className="text-[0.7rem] uppercase tracking-widest text-muted-foreground mb-1">{tx.canonStatement[0]}</p>
             <p className="text-sm text-foreground/70 leading-relaxed whitespace-pre-line">{tx.canonStatement[1]}</p>
+          </div>
+        </section>
+
+        {/* ── Why Different ── */}
+        <section id="whydiff">
+          <SectionTag>{tx.whyDiffTag}</SectionTag>
+          <h2 className="text-2xl font-bold text-foreground mb-2">{tx.whyDiffTitle}</h2>
+          <p className="text-muted-foreground text-sm mb-6 max-w-xl">{tx.whyDiffSub}</p>
+
+          {/* Manifesto */}
+          <div className="border-l-2 border-blue-700 pl-5 py-3 bg-blue-900/5 border border-blue-900/20 mb-8">
+            <p className="text-sm text-foreground/70 leading-relaxed">{tx.whyDiffManifesto}</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            {tx.whyDiffCards.map(({ icon, t: title, b: body }) => (
+              <div key={title} className="border border-border bg-card p-5 hover:border-border/80 transition-colors">
+                <div className="text-xl mb-3">{icon}</div>
+                <h3 className="text-sm font-semibold text-foreground mb-2">{title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Eliminates */}
+          <div className="border border-red-800/30 bg-red-900/5 p-5">
+            <p className="text-red-400 text-xs font-bold uppercase tracking-widest mb-3">{tx.whyDiffEliminates}</p>
+            <ul className="text-xs text-foreground/60 space-y-1.5">
+              {tx.whyDiffElimList.map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="text-red-400 shrink-0">✗</span>{item}
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -1057,7 +1121,12 @@ export default function SlimePage() {
         <section id="security">
           <SectionTag>{tx.securityTag}</SectionTag>
           <h2 className="text-2xl font-bold text-foreground mb-2">{tx.securityTitle}</h2>
-          <p className="text-muted-foreground text-sm mb-8 max-w-xl">{tx.securitySub}</p>
+          <p className="text-muted-foreground text-sm mb-6 max-w-xl">{tx.securitySub}</p>
+
+          {/* Verifiability statement */}
+          <div className="border-l-2 border-green-700 pl-5 py-3 bg-green-900/5 border border-green-900/20 mb-8">
+            <p className="text-xs text-foreground/60 leading-relaxed">{tx.securityVerifiability}</p>
+          </div>
 
           <div className="flex flex-col gap-3 mb-8">
             {tx.securityInvariants.map(({ id, title, desc, enforcer }) => (

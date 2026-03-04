@@ -203,9 +203,9 @@ const t = {
 
     symbioteTag: "Structural Audit",
     symbioteTitle: "SYMBIOTE Structural Audit",
-    symbioteSub: "An external structural review of the SYF stack was conducted to evaluate whether the architecture actually enforces its stated invariants.",
-    symbiotePills: ["Symbiote · Author", "March 2026", "SYF Full-Stack", "Structural Analysis"],
-    symbioteSubtitle: "Full-stack structural analysis · Gate / Shield / AB / SLIME",
+    symbioteSub: "An external structural review of the SYF stack was conducted by Symbiote, a custom OpenAI ChatGPT agent, to evaluate whether the architecture actually enforces its stated invariants.",
+    symbiotePills: ["Symbiote · OpenAI ChatGPT", "March 2026", "SYF Full-Stack", "Structural Analysis"],
+    symbioteSubtitle: "Custom OpenAI ChatGPT agent · Full-stack structural analysis",
     symbioteScope: "The audit focused on the interaction between the four execution layers rather than reviewing policies or runtime behavior. The analysis examined the structural properties of the system.",
     symbioteKeyFindingTitle: "Key Finding — Monotone Capability System",
     symbioteKeyFinding: "The stack behaves as a monotone capability system. Each transition in the pipeline reduces the set of possible actions. No component in the stack can increase capability once the process begins.",
@@ -536,9 +536,9 @@ const t = {
 
     symbioteTag: "Audit Structurel",
     symbioteTitle: "Audit Structurel SYMBIOTE",
-    symbioteSub: "Une revue structurelle externe de la stack SYF a été conduite pour évaluer si l'architecture enforce réellement ses invariants déclarés.",
-    symbiotePills: ["Symbiote · Auteur", "Mars 2026", "SYF Full-Stack", "Analyse Structurelle"],
-    symbioteSubtitle: "Analyse structurelle full-stack · Gate / Shield / AB / SLIME",
+    symbioteSub: "Une revue structurelle externe de la stack SYF a été conduite par Symbiote, un agent ChatGPT personnalisé sur la plateforme OpenAI, pour évaluer si l'architecture enforce réellement ses invariants déclarés.",
+    symbiotePills: ["Symbiote · OpenAI ChatGPT", "Mars 2026", "SYF Full-Stack", "Analyse Structurelle"],
+    symbioteSubtitle: "Agent ChatGPT personnalisé OpenAI · Analyse structurelle full-stack",
     symbioteScope: "L'audit s'est concentré sur l'interaction entre les quatre couches d'exécution plutôt que sur les politiques ou le comportement à l'exécution. L'analyse a examiné les propriétés structurelles du système.",
     symbioteKeyFindingTitle: "Conclusion clé — Système de Capacité Monotone",
     symbioteKeyFinding: "La stack se comporte comme un système de capacité monotone. Chaque transition dans le pipeline réduit l'ensemble des actions possibles. Aucun composant de la stack ne peut augmenter la capacité une fois le processus lancé.",
@@ -1116,7 +1116,7 @@ export default function SlimePage() {
             <div className="flex items-center gap-3 px-5 py-3 bg-white/[0.03] border-b border-border">
               <div className="h-10 w-10 rounded-full bg-gradient-to-br from-violet-600 to-purple-700 flex items-center justify-center text-white font-bold shrink-0">S</div>
               <div>
-                <div className="text-sm font-semibold text-foreground">Symbiote</div>
+                <div className="text-sm font-semibold text-foreground">Symbiote (OpenAI)</div>
                 <div className="text-xs text-muted-foreground">{tx.symbioteSubtitle}</div>
               </div>
               <Pill variant="gold" className="ml-auto">Structural</Pill>

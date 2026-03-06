@@ -347,7 +347,7 @@ export default function SyfcorpHomepage() {
             </div>
             <div className="flex items-center gap-4">
               <a className="hover:text-foreground transition-colors underline underline-offset-4" href="/terms">{tx.terms}</a>
-              <a className="hover:text-foreground transition-colors underline underline-offset-4" href="https://github.com/AnathemaOfficial" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <span className="opacity-50 cursor-default">Open source — coming soon</span>
             </div>
           </div>
         </footer>

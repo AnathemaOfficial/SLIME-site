@@ -261,8 +261,8 @@ const t = {
       { id: "R-4", title: "Capacity / Budget / Progression sealed", desc: "Non-writable by integrators (private inners, getters only). Mutated only inside the law via pub(crate) consume/tick." },
       { id: "R-5", title: "Domain IDs are u64 end-to-end", desc: "All domain identifiers reaching SLIME egress MUST be representable as u64. No truncation to u32/u16 anywhere." },
     ],
-    conformanceGithub: "View FULL_STACK_CONFORMANCE.md",
-    conformanceGithubUrl: "https://github.com/AnathemaOfficial/SLIME/blob/main/FULL_STACK_CONFORMANCE.md",
+    conformanceGithub: "FULL_STACK_CONFORMANCE.md",
+    conformanceGithubUrl: null,
 
     securityTag: "Security Invariants",
     securityTitle: "Structural Guarantees of the Stack",
@@ -278,10 +278,10 @@ const t = {
       { id: "S7", title: "Law Sealing", desc: "The invariant I is compiled into the binary. Not configurable, not interpretable at runtime. Modification requires recompilation + redeployment.", enforcer: "AB-S" },
     ],
     securityRepos: [
-      { name: "SYF-Gate", url: "https://github.com/AnathemaOfficial/SYF-Gate", desc: "Admission, bounds, invariant check" },
-      { name: "SYF-Shield", url: "https://github.com/AnathemaOfficial/SYF-Shield", desc: "Capacity, progression, irreversibility" },
-      { name: "Anathema-Breaker", url: "https://github.com/AnathemaOfficial/Anathema-Breaker", desc: "Law composition, sealed budget" },
-      { name: "SLIME", url: "https://github.com/AnathemaOfficial/SLIME", desc: "Binary membrane, 32B egress ABI" },
+      { name: "SYF-Gate", url: null, desc: "Admission, bounds, invariant check" },
+      { name: "SYF-Shield", url: null, desc: "Capacity, progression, irreversibility" },
+      { name: "Anathema-Breaker", url: null, desc: "Law composition, sealed budget" },
+      { name: "SLIME", url: null, desc: "Binary membrane, 32B egress ABI" },
     ],
 
     patchTag: "Patch v0.1",
@@ -298,7 +298,7 @@ const t = {
       ["Version", "v0.1 (hardening · law unchanged)"],
       ["Status", "CANON / SEALED"],
       ["Stack", "Rust 60% · Shell 18% · HTML 15% · Python 7%"],
-      ["Repo", '<a href="https://github.com/AnathemaOfficial/SLIME" class="text-blue-400 underline" target="_blank">github.com/AnathemaOfficial/SLIME ↗</a>'],
+      ["Repo", '<span class="text-muted-foreground opacity-50">Private — open source coming soon</span>'],
     ],
     ingressLabel: "Ingress API",
     ingressRows: [
@@ -331,8 +331,8 @@ const t = {
     ],
     asciiLabel: "System flow",
     ctaTitle: "SLIME is under construction",
-    ctaSub: "The project is actively being built. Source code and specifications are available on GitHub.",
-    ctaGithub: "View on GitHub",
+    ctaSub: "The project is actively being built. Source code will be available soon.",
+    ctaGithub: "Source — coming soon",
     ctaSpec: "v0.1 Specification",
     ingressExampleLabel: "Request example",
     footerText: "Prototype audited by Manus AI · Analyzed by Claude & GPT-4 · © 2026 AnathemaOfficial",
@@ -594,8 +594,8 @@ const t = {
       { id: "R-4", title: "Capacité / Budget / Progression scellés", desc: "Non-modifiables par les intégrateurs (champs privés, getters uniquement). Mutés uniquement dans la loi via pub(crate) consume/tick." },
       { id: "R-5", title: "Domain IDs en u64 de bout en bout", desc: "Tous les identifiants de domaine atteignant l'egress SLIME DOIVENT être représentables en u64. Aucune troncation u32/u16 nulle part." },
     ],
-    conformanceGithub: "Voir FULL_STACK_CONFORMANCE.md",
-    conformanceGithubUrl: "https://github.com/AnathemaOfficial/SLIME/blob/main/FULL_STACK_CONFORMANCE.md",
+    conformanceGithub: "FULL_STACK_CONFORMANCE.md",
+    conformanceGithubUrl: null,
 
     securityTag: "Invariants de Sécurité",
     securityTitle: "Garanties Structurelles de la Stack",
@@ -611,10 +611,10 @@ const t = {
       { id: "S7", title: "Scellement de Loi", desc: "L'invariant I est compilé dans le binaire. Non configurable, non interprétable à l'exécution. La modification exige recompilation + redéploiement.", enforcer: "AB-S" },
     ],
     securityRepos: [
-      { name: "SYF-Gate", url: "https://github.com/AnathemaOfficial/SYF-Gate", desc: "Admission, bornes, vérification d'invariants" },
-      { name: "SYF-Shield", url: "https://github.com/AnathemaOfficial/SYF-Shield", desc: "Capacité, progression, irréversibilité" },
-      { name: "Anathema-Breaker", url: "https://github.com/AnathemaOfficial/Anathema-Breaker", desc: "Composition de loi, budget scellé" },
-      { name: "SLIME", url: "https://github.com/AnathemaOfficial/SLIME", desc: "Membrane binaire, ABI egress 32B" },
+      { name: "SYF-Gate", url: null, desc: "Admission, bornes, vérification d'invariants" },
+      { name: "SYF-Shield", url: null, desc: "Capacité, progression, irréversibilité" },
+      { name: "Anathema-Breaker", url: null, desc: "Composition de loi, budget scellé" },
+      { name: "SLIME", url: null, desc: "Membrane binaire, ABI egress 32B" },
     ],
 
     patchTag: "Patch v0.1",
@@ -631,7 +631,7 @@ const t = {
       ["Version", "v0.1 (durcissement · loi inchangée)"],
       ["Statut", "CANON / SEALED"],
       ["Stack", "Rust 60% · Shell 18% · HTML 15% · Python 7%"],
-      ["Repo", '<a href="https://github.com/AnathemaOfficial/SLIME" class="text-blue-400 underline" target="_blank">github.com/AnathemaOfficial/SLIME ↗</a>'],
+      ["Repo", '<span class="text-muted-foreground opacity-50">Privé — open source bientôt disponible</span>'],
     ],
     ingressLabel: "Ingress API",
     ingressRows: [
@@ -664,8 +664,8 @@ const t = {
     ],
     asciiLabel: "Flux système",
     ctaTitle: "SLIME est en construction",
-    ctaSub: "Le projet est activement en développement. Le code source et les spécifications sont disponibles sur GitHub.",
-    ctaGithub: "Voir sur GitHub",
+    ctaSub: "Le projet est activement en développement. Le code source sera disponible bientôt.",
+    ctaGithub: "Source — bientôt disponible",
     ctaSpec: "Spécification v0.1",
     ingressExampleLabel: "Exemple de requête",
     footerText: "Prototype audité par Manus AI · Analysé par Claude & GPT-4 · © 2026 AnathemaOfficial",
@@ -780,9 +780,9 @@ export default function SlimePage() {
               <button onClick={() => setLang("en")} className={`px-3 py-1.5 transition-colors ${lang === "en" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>EN</button>
               <button onClick={() => setLang("fr")} className={`px-3 py-1.5 transition-colors ${lang === "fr" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>FR</button>
             </div>
-            <a href="https://github.com/AnathemaOfficial/SLIME" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors">
-              GitHub <ExternalLink className="h-3 w-3" />
-            </a>
+            <span className="hidden sm:flex items-center gap-1 text-xs text-muted-foreground opacity-50 cursor-default">
+              Source — soon
+            </span>
           </div>
         </div>
       </nav>
@@ -1299,14 +1299,11 @@ export default function SlimePage() {
             </ul>
           </div>
 
-          <a
-            href={tx.conformanceGithubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 border border-border text-xs font-mono text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
+          <span
+            className="inline-flex items-center gap-2 px-4 py-2 border border-border text-xs font-mono text-muted-foreground opacity-50 cursor-default"
           >
-            <ExternalLink className="h-3.5 w-3.5" /> {tx.conformanceGithub}
-          </a>
+            {tx.conformanceGithub}
+          </span>
         </section>
 
         {/* ── Security ── */}
@@ -1338,19 +1335,16 @@ export default function SlimePage() {
             <p className="text-[0.65rem] uppercase tracking-widest text-muted-foreground mb-4">Ecosystem</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {tx.securityRepos.map((r) => (
-                <a
+                <div
                   key={r.name}
-                  href={r.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 px-3 py-2.5 border border-border hover:border-blue-800/50 hover:bg-blue-900/5 transition-colors"
+                  className="flex items-start gap-3 px-3 py-2.5 border border-border opacity-60"
                 >
-                  <ExternalLink className="h-3.5 w-3.5 text-blue-400 shrink-0 mt-0.5" />
+                  <div className="h-3.5 w-3.5 rounded-full bg-muted-foreground/30 shrink-0 mt-0.5" />
                   <div>
                     <div className="text-sm font-semibold text-foreground/80">{r.name}</div>
                     <div className="text-[0.65rem] text-muted-foreground">{r.desc}</div>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
           </div>
@@ -1425,22 +1419,16 @@ Content-Type: application/json
             <p className="text-sm text-muted-foreground max-w-md">{tx.ctaSub}</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-            <a
-              href="https://github.com/AnathemaOfficial/SLIME"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-foreground text-background text-xs font-mono hover:opacity-90 transition-opacity"
+            <span
+              className="flex items-center gap-2 px-4 py-2 bg-foreground/20 text-muted-foreground text-xs font-mono cursor-default opacity-50"
             >
-              <ExternalLink className="h-3.5 w-3.5" /> {tx.ctaGithub}
-            </a>
-            <a
-              href="https://github.com/AnathemaOfficial/SLIME/blob/main/ACTUATOR_V0_CANON.md"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 border border-border text-xs font-mono text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
+              {tx.ctaGithub}
+            </span>
+            <span
+              className="flex items-center gap-2 px-4 py-2 border border-border text-xs font-mono text-muted-foreground cursor-default opacity-50"
             >
-              <ExternalLink className="h-3.5 w-3.5" /> {tx.ctaSpec}
-            </a>
+              {tx.ctaSpec}
+            </span>
           </div>
         </div>
       </div>

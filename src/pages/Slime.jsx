@@ -794,7 +794,7 @@ export default function SlimePage() {
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="inline-block text-[0.65rem] tracking-[3px] uppercase text-blue-400 border border-blue-900/50 px-3 py-1 mb-6">{tx.heroTag}</div>
             <img
-              src="/SLIME-header-logo.png"
+              src="/SLIME-header-logo.svg"
               alt="SLIME — Systemic Law Invariant Machine Environment"
               className="mb-4 w-auto max-w-[480px] sm:max-w-[600px]"
             />

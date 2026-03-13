@@ -27,6 +27,7 @@ const t = {
     noMatch: (q) => <>No projects match <span className="text-foreground">"{q}"</span></>,
     viewDocs: "View docs",
     comingSoon: "Coming soon",
+    github: "GitHub",
     constraintsTitle: "Operating constraints",
     constraintsSub: "Defaults for this ecosystem: sealed interfaces, determinism, and removal of feedback channels.",
     constraints: [
@@ -46,6 +47,7 @@ const t = {
     noMatch: (q) => <>Aucun projet ne correspond à <span className="text-foreground">"{q}"</span></>,
     viewDocs: "Voir la doc",
     comingSoon: "Bientôt",
+    github: "GitHub",
     constraintsTitle: "Contraintes opérationnelles",
     constraintsSub: "Défauts de cet écosystème : interfaces scellées, déterminisme, et suppression des canaux de feedback.",
     constraints: [
@@ -62,6 +64,7 @@ const t = {
 const products = [
   {
     slug: "/slime",
+    github: "https://github.com/AnathemaOfficial/SLIME",
     name: "SLIME",
     icon: Shield,
     status: "Sealed v0.1",
@@ -71,6 +74,7 @@ const products = [
   },
   {
     slug: "/anathema",
+    github: "https://github.com/AnathemaOfficial/Anathema-Breaker",
     name: "ANATHEMA",
     icon: Cpu,
     status: "P0 canon",
@@ -80,6 +84,7 @@ const products = [
   },
   {
     slug: "/gate",
+    github: "https://github.com/AnathemaOfficial/SYF-Gate",
     name: "SYF Gate",
     icon: Fingerprint,
     status: "Core concept sealed",
@@ -89,6 +94,7 @@ const products = [
   },
   {
     slug: "/shield",
+    github: "https://github.com/AnathemaOfficial/SYF-Shield",
     name: "SYF Shield",
     icon: Lock,
     status: "Defined",
@@ -107,6 +113,7 @@ const products = [
   },
   {
     slug: "/lab",
+    github: "https://github.com/AnathemaOfficial/SYF-Lab",
     name: "SYF Lab",
     icon: FlaskConical,
     status: "Active",
@@ -300,6 +307,13 @@ export default function SyfcorpHomepage() {
                             <ArrowRight className="h-3.5 w-3.5" />
                           </Button>
                         </Link>
+                      ) : p.github ? (
+                        <a href={p.github} target="_blank" rel="noopener noreferrer">
+                          <Button variant="outline" className="rounded-xl gap-2 text-xs">
+                            {tx.github}
+                            <ArrowRight className="h-3.5 w-3.5" />
+                          </Button>
+                        </a>
                       ) : (
                         <Button variant="outline" className="rounded-xl gap-2 text-xs opacity-40 cursor-not-allowed" disabled>
                           {tx.comingSoon}
